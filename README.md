@@ -352,3 +352,199 @@ print(data1.isAfter(data2)):
 print(data1.isBefore(data2)):
 print(data1.compareTo(data2));
 ~~~
+
+### Condição If em Dart
+
+#### Operadores Logicos
+|Operadores|Função|
+|-|-|
+|==|Igual a|
+|!=|Diferente de|
+|>|Maior|
+|<|Menor|
+|>=|Maior Igual|
+|<=|Menor Igual|
+|&&|E|
+|\|\||Ou|
+
+~~~dart
+if (condição){
+    #caso a condição sejá true execute esse bloco de codigo
+}else if (condição ){
+    #segunda condição caso a primeira sejá false
+    #caso a condição sejá true execute esse bloco de codigo
+}else{
+    #caso a condição sejá false execute esse bloco de codigo
+}
+~~~
+
+#### If Ternário
+
+Exemplo com nota de prova
+segue essa estrutura (condição) ? True: false
+~~~dart
+var prova = 10;
+var resultado = (prova > 7)? "Passou": "Reprovado";
+~~~
+
+### Ler Dados do Console
+
+Leitura pelo terminal
+~~~dart
+import "dart:convert";
+import "dario:io";
+var line = stdin.readLineSync(encoding: uft8);
+~~~
+***!Aviso*** se vc estiver usando o Vscode se vc executar pelo deBuger ele vai ler a informação mais não vai funcionar, para funcionar vc pricisar executar pelo proprio dart indo no terminal e executando "***dart run***"
+
+
+### Switch Case
+
+~~~dart
+switch(operação){
+    case 1:
+        print("Opeção 1 ");
+        break;
+    case 2:
+        print("Opeção 2 ");
+        break;
+    default
+    print("Caso Nenhuma Opção for selecionada");
+    exit(0);
+}
+~~~
+
+### Laço de Repetição For
+
+~~~dart
+for (var i = 0; i < 99; i++){
+    print(i);
+}
+~~~
+
+~~~dart
+var texto = "Meu Bloco For"
+for (var i = 0; i < texto.length; i++){
+    print(texto[i])
+}
+~~~
+
+for lista
+~~~dart
+var lista = ["maça","banana","manga","limão"]
+for (var i = 0; i < lista.length; i++){
+    print(lista[i])
+}
+~~~
+
+#### for-each ou for-in
+~~~dart
+var numeros = [1,12,23,34,45,65]
+for (var i in numeros){
+    print(i)
+}
+
+numeros.forEach((element) {
+    print(element);
+});
+~~~
+
+#### while
+~~~dart
+var contador = 0;
+var total = 10;
+
+while (condição){codigo}
+
+while (contador < total){
+    print(contador)
+    contador++;
+}
+~~~
+
+do While
+~~~dart
+var contador = 0;
+var total = 10
+
+do {
+    codigo
+}while(condição)
+
+~~~
+
+### Função em Dart
+Função
+~~~dart
+void printHello(){
+    print("Hellow World");
+}
+
+int Numero(){
+    return 30;
+}
+
+int soma(int x, int y){
+    return x + y;
+}
+
+int soma1(int x, int y) => x + y 
+~~~
+
+Arrow functions
+~~~dart
+void printData(String texto) => print(texto);
+~~~
+Passando uma função como parametro
+~~~dart
+print(executar(10, decrementar))
+
+int executar(int numero, Function func){
+    return func(numero)
+}
+int decrementar(int numero){
+    return numero - 1;
+}
+~~~
+
+### Orientação a Objeto em Dart
+
+#### Detalhamento do OO
+- Classes
+    - Classes Abstratas
+- Heranças
+    - Interfaces
+- Objetos 
+    - Inversão de Controle e Injeção de depêndencia
+- Encapsulamento
+    - SOLID
+- Polimorfismo
+    - DDD - Domain Driven Desing
+
+#### Criando uma Class
+~~~dart
+class Pessoa {
+  String nome = "";
+  String endereco = "";
+  
+}
+~~~
+Herança variaveis com _ na frente quer dizer que ela é privada
+~~~dart
+abstract class Pessoa{
+    Pessoa(String nome, String endereco){
+        _nome = nome;
+        _endereco = endereco;
+    }
+    String _nome = "";
+    String _endereco = "";
+}
+
+class PessoaFisica extends Pessoa{
+    PessoaFisica(String nome, String endereco, String cpf):super(nome, endereco){
+        _cpf = cpf
+    }
+    String _cpf = "";
+}
+~~~
+
