@@ -532,6 +532,7 @@ class Pessoa {
 Herança variaveis com _ na frente quer dizer que ela é privada
 ~~~dart
 abstract class Pessoa{
+    //Contrutor
     Pessoa(String nome, String endereco){
         _nome = nome;
         _endereco = endereco;
@@ -541,10 +542,38 @@ abstract class Pessoa{
 }
 
 class PessoaFisica extends Pessoa{
+    //Contrutor
     PessoaFisica(String nome, String endereco, String cpf):super(nome, endereco){
         _cpf = cpf
     }
     String _cpf = "";
 }
+~~~
+
+### Tratamento de Erros
+
+~~~dart
+//Vai tentar Executar o Comando
+try {
+    
+  } catch (e) {
+    //Caso ter Error Vai executar esse bloco de codigo
+  }
+~~~
+
+### Teste em Dart
+Maior ou igual
+~~~dart
+  test('calculate', () {
+    //Espera que o resultado seja maior ou igual que 42
+    expect(calculate(), greaterThan(42);
+  });
+~~~
+
+Experando um Argumento Error
+~~~dart
+test('calculatar Desconto com Desconto Zerado', () {
+    expect(() => app.calcularDesconto(1000, 0, true), throwsA(TypeMatcher<ArgumentError>()));
+  });
 ~~~
 

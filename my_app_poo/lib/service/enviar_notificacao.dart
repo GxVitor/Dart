@@ -1,6 +1,6 @@
-import 'package:my_app_poo/classes/Pessoa.dart';
+import 'package:my_app_poo/classes/pessoa.dart';
 import 'package:my_app_poo/emun/tipo_notificacao.dart';
-import 'package:my_app_poo/service/Notificacao_Interface.dart';
+import 'package:my_app_poo/service/notificacao_interface.dart';
 import 'package:my_app_poo/service/impl/notificacaoEmail.dart';
 import 'package:my_app_poo/service/impl/notificacaoNenhum.dart';
 import 'package:my_app_poo/service/impl/notificacaoPushNotification.dart';

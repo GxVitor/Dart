@@ -1,5 +1,5 @@
-import 'package:my_app_poo/classes/Pessoa.dart';
-import 'package:my_app_poo/service/Notificacao_Interface.dart';
+import 'package:my_app_poo/classes/pessoa.dart';
+import 'package:my_app_poo/service/notificacao_interface.dart';
 
 class NotificacaoSMS implements NotificacaoInterface {
   @override

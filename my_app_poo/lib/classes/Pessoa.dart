@@ -1,4 +1,4 @@
-// ignore_for_file: unused_field
+// ignore_for_file: file_names
 
 import 'package:my_app_poo/emun/tipo_notificacao.dart';
 
@@ -36,7 +36,6 @@ abstract class Pessoa {
 
   @override
   String toString() {
-    // TODO: implement toString
     return {
       "Nome": _nome,
       "Endereco": _endereco,

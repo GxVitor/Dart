@@ -1,25 +1,26 @@
-import 'package:my_app_poo/classes/Pessoa.dart';
+import 'package:my_app_poo/classes/pessoa.dart';
 import 'package:my_app_poo/emun/tipo_notificacao.dart';
 
-class PessoaJuridica extends Pessoa {
-  PessoaJuridica(String nome, String endereco, String cnpj,
+class PessoaFisica extends Pessoa {
+  PessoaFisica(String nome, String endereco, String cpf,
       {TipoNotificacao tipoNotificacao = TipoNotificacao.NENHUM})
       : super(nome, endereco, tipoNotificacao: tipoNotificacao) {
-    _cnpj = _cnpj;
+    _cpf = cpf;
   }
 
-  String _cnpj = "";
+  String _cpf = "";
 
-  set setCnpj(String cnpj) => _cnpj = cnpj;
-  String get getCnpj => _cnpj;
+  set setCpf(String cpf) => _cpf = cpf;
+
+  String get getCpf => _cpf;
 
   @override
   String toString() {
     // Aqui é oque vai ser printado quando pedir para printar a class
     return {
-      "Nome": getNome,
-      "Endereco": getEndereco,
-      "CNPJ": _cnpj,
+      "Nome": super.getNome,
+      "Endereco": super.getEndereco,
+      "Cpf": _cpf,
       "TipoNotificacao": getTiponotificacao
     }.toString();
   }

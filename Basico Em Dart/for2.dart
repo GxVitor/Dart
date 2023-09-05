@@ -4,6 +4,7 @@ main() {
     print(animais[i]);
   }
   print('-------forEach----------');
+  // ignore: unnecessary_set_literal
   animais.forEach((biso) => {print(biso)});
 
   print("------- For in -------");

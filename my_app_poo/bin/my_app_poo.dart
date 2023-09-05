@@ -1,5 +1,5 @@
-import 'package:my_app_poo/classes/PessoaFisica.dart';
-import 'package:my_app_poo/classes/PessoaJuridica.dart';
+import 'package:my_app_poo/classes/pessoa_fisica.dart';
+import 'package:my_app_poo/classes/pessoa_juridica.dart';
 import 'package:my_app_poo/emun/tipo_notificacao.dart';
 import 'package:my_app_poo/service/enviar_notificacao.dart';
 
