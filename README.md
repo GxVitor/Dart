@@ -577,3 +577,23 @@ test('calculatar Desconto com Desconto Zerado', () {
   });
 ~~~
 
+### Teste com Mock e HTTP
+para fazer requisição HTTP tem que colocar a dependencia
+
+dependencies:
+  http: ^1.1.0
+
+<br>
+import 'package:http/http.dart';
+~~~dart
+Future<Map<dynamic, dynamic>> retornarCEP(String cep) async {
+    var uri = Uri.parse("https://viacep.com.br/ws/$cep/json/");
+    var retorno = await http.get(uri);
+    var decodeRespose = jsonDecode(utf8.decode(retorno.bodyBytes)) as Map;
+    print(decodeRespose);
+    return decodeRespose;
+  }
+~~~
+Função para retorno um map do cep
+
+

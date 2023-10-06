@@ -10,3 +10,7 @@ double calcularDesconto(double valor, double desconto, bool percentual) {
   }
   return valor - desconto;
 }
+
+String VoltarUpCase(String texto) {
+  return texto.toUpperCase();
+}
