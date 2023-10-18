@@ -585,6 +585,7 @@ dependencies:
 
 <br>
 import 'package:http/http.dart';
+
 ~~~dart
 Future<Map<dynamic, dynamic>> retornarCEP(String cep) async {
     var uri = Uri.parse("https://viacep.com.br/ws/$cep/json/");
